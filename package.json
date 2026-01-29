@@ -1,0 +1,51 @@
+{
+  "name": "wt-api-wrapper",
+  "private": true,
+  "version": "1.0.0",
+  "description": "JS библиотека для удобной работы с коробоным API WebSoft",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --build --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch"
+  },
+  "keywords": [
+    "api",
+    "wrapper",
+    "legacy",
+    "typescript",
+    "collection",
+    "ajax"
+  ],
+  "author": "Vitaliy Nadezhdin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "@vitest/ui": "^3.2.4",
+    "typedoc": "^0.28.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
