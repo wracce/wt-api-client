@@ -1,8 +1,7 @@
 {
-  "name": "wt-api-wrapper",
-  "private": true,
-  "version": "1.0.0",
-  "description": "JS библиотека для удобной работы с коробоным API WebSoft",
+  "name": "wt-api-client",
+  "version": "0.1.0",
+  "description": "Library for convenient calling of the standard WebSoft API",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +13,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc --build",
@@ -30,22 +30,30 @@
   },
   "keywords": [
     "api",
-    "wrapper",
-    "legacy",
-    "typescript",
-    "collection",
-    "ajax"
+    "bs",
+    "borisscript",
+    "ssjs",
+    "server side javascript",
+    "wt",
+    "webtutor",
+    "websoft"
   ],
-  "author": "Vitaliy Nadezhdin",
+  "author": "wracce",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wracce/wt-api-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wracce/wt-api-client/issues"
+  },
+  "homepage": "https://github.com/wracce/wt-api-client#readme",
   "devDependencies": {
     "@types/node": "^24.0.15",
     "@vitest/ui": "^3.2.4",
+    "dotenv": "^17.2.0",
     "typedoc": "^0.28.7",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "dotenv": "^17.2.0"
   }
 }

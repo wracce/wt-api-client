@@ -5,7 +5,7 @@
 ## Установка
 
 ```bash
-npm install wt-api-wrapper
+npm install wt-api-client
 ```
 
 ## Быстрый старт
@@ -13,7 +13,7 @@ npm install wt-api-wrapper
 ### Простое использование
 
 ```typescript
-import { getCollectionByCode, getCollectionById } from 'wt-api-wrapper';
+import { getCollectionByCode, getCollectionById } from 'wt-api-client';
 
 // Получение данных по коду выборки
 const response = await getCollectionByCode('user_list');
@@ -27,7 +27,7 @@ console.log(response2.results);
 ### Использование с настройками
 
 ```typescript
-import { WTApiClient } from 'wt-api-wrapper';
+import { WTApiClient } from 'wt-api-client';
 
 const client = new WTApiClient({
   baseUrl: 'https://your-domain.com',
@@ -164,7 +164,7 @@ interface SortParameter {
 ### Получение списка пользователей с пагинацией
 
 ```typescript
-import { WTApiClient } from 'wt-api-wrapper';
+import { WTApiClient } from 'wt-api-client';
 
 const client = new WTApiClient({
   baseUrl: 'https://your-domain.com'
@@ -193,7 +193,7 @@ async function getUsers(page = 1, pageSize = 50) {
 ### Получение данных с фильтрацией
 
 ```typescript
-import { WTApiUtils, getCollectionByCode } from 'wt-api-wrapper';
+import { WTApiUtils, getCollectionByCode } from 'wt-api-client';
 
 async function getActiveUsers(department: string) {
   const parameters = WTApiUtils.createParametersString({
@@ -213,7 +213,7 @@ async function getActiveUsers(department: string) {
 ### Обработка ошибок
 
 ```typescript
-import { WTApiClient, WTApiError } from 'wt-api-wrapper';
+import { WTApiClient, WTApiError } from 'wt-api-client';
 
 const client = new WTApiClient();
 
